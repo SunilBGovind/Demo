@@ -58,7 +58,7 @@ class ConferenceHallBooking(Document):
 		gen_code = False
 		if not gen_code:
 			gen_code = int(random.random()*10000)		
-		self.message = 'Your Conference Hall is Booked for Meeting ' + str(self.agenda) + ' and Use OTP : ' + str(gen_code) +' to start the meeting'
+		self.message = 'Your Conference Hall is Booked for Meeting ' + str(self.agenda) + ' and Use OTP : ' + str(gen_code) +' to start the meeting!!!'
 		doc = frappe.new_doc("Conference Booking Log")
 		doc.update({"meeting" : self.name, "passcode" : gen_code})
 		doc.insert()
